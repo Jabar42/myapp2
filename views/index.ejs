@@ -3,12 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Aplicación Web</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <title>Generador de Video</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-  <h1><%= title %></h1>
-  <p>Bienvenido a mi aplicación web</p>
-  <script src="/js/script.js"></script>
+  <div class="container">
+    <h1 class="mt-5">Generador de Video</h1>
+    <form action="/generate" method="POST" class="mt-3">
+      <div class="form-group">
+        <label for="text">Ingrese el texto:</label>
+        <textarea class="form-control" id="text" name="text" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Generar Video</button>
+    </form>
+  </div>
 </body>
 </html>
